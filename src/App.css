@@ -1,38 +1,182 @@
 .App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tabs {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.tab-content {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 300px;
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: blue;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:disabled {
+  background-color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label Styling */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+/* Input and Select Styling */
+input,
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Ensures inputs and selects take up full width */
+  box-sizing: border-box; /* Ensures padding does not increase width */
+  transition: border-color 0.3s;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+  box-sizing: border-box; /* Ensures padding does not increase width */
+  transition: border-color 0.3s;
+}
+
+/* Focus Effect for Inputs and Select */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Flexbox for aligning label and input horizontally */
+.form-row {
+  display: flex;
+  flex-direction: column; /* Align label and input vertically */
+  gap: 8px; /* Gap between label and input */
+}
+
+/* For checkboxes */
+label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Multi-select checkboxes styling */
+.multi-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Submit button styling */
+submit-button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  width: 1000%; /* Ensures inputs and selects take up full width */
+}
+
+submit-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Success and error messages */
+p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* Loading message */
+.loading-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #007bff;
 }

@@ -1,0 +1,55 @@
+/* Card container */
+.card {
+  display: flex;
+  flex-direction: row; /* Align content in a row (Image on the left, Name and Description on the right) */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 600px;  /* Maximum width for the card */
+  margin: 20px auto;  /* Center the card on the page */
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect: scale the card slightly when hovering */
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Image styling */
+.card-image {
+  width: 120px;  /* Fixed width for the image */
+  height: 120px; /* Fixed height for the image */
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-right: 20px; /* Space between image and content */
+}
+
+.card-image img {
+  width: 100%;   /* Make the image cover the width of the container */
+  height: 100%;  /* Make the image cover the height of the container */
+  object-fit: cover;  /* Preserve aspect ratio while filling the space */
+}
+
+/* Card content styling */
+.card-content {
+  display: flex;
+  flex-direction: column;  /* Arrange name and description vertically */
+  justify-content: center; /* Vertically align name and description */
+  flex-grow: 1;  /* Allow content to take up remaining space */
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.4;
+}
